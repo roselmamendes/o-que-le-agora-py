@@ -2,17 +2,17 @@
 
 **Objetivo**
 
-[] ler RSS feed de sites
+- [ ] ler RSS feed de sites
 
-[] guardar link para esses feeds
+- [ ] guardar link para esses feeds
 
-[] botão atualizar feed
+- [ ] botão atualizar feed
 
-[] ler mais de um RSS feed
+- [ ] ler mais de um RSS feed
 
-[] adicionar rss feed
+- [ ] adicionar rss feed
 
-[] mostrar links em ordem cronologica
+- [ ] mostrar links em ordem cronologica
 
 **Outros repositorios relacionados**
 
