@@ -1,8 +1,9 @@
 # Contributing
 
-## You need
+## Você precisa
 
 - docker
+- gcloud
 
 ## Tech Stack
 
@@ -10,7 +11,7 @@
 - docker
 - Flask
 
-## Running locally
+## Executando localmente
 
 1. 'sh cli.sh build-image'
 
@@ -18,8 +19,12 @@
 
 ## Deploy
 
-1. Log on GCP with gcloud docker image 'gcloud auth login'
+1. Logar no GCP com gcloud 'gcloud auth login'
 
-2. Set the GCP project 'gcloud config set project o-que-le-agora'
+2. Configure o projeto GCP 'gcloud config set project o-que-le-agora'
 
-3. Run 'gcloud app deploy'
+3. Rode 'gcloud app deploy'
+
+## Referências
+
+https://realpython.com/python-testing/
