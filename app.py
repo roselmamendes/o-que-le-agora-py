@@ -8,14 +8,19 @@ app = Flask(__name__)
 @app.route('/posts/<feed_identifier>')
 def get_posts(feed_identifier):
     posts = get_post_list(feed_identifier)
+    print(f'app.py - 200 - get_posts - For {feed_identifier} got {len(posts)} posts')
     return jsonify(posts)
 
 @app.route('/feed', methods=['POST'])
 def add_site_feed():
     payload = request.get_json()
     result = save_feed_url(payload)
-
-    return ({}, 201) if not result else ({'error': result}, 400)
+    if (not result):
+        print(f'app.py - 201 - add_site_feed - Added {feed_identifier}')
+        return {}, 201
+    else:
+        print(f'app.py - 400 - add_site_feed - {result}}')
+        return {'error': result}, 400
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
