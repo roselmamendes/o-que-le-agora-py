@@ -16,10 +16,10 @@ def add_site_feed():
     payload = request.get_json()
     result = save_feed_url(payload)
     if (not result):
-        print(f'app.py - 201 - add_site_feed - Added {feed_identifier}')
+        print(f'app.py - 201 - add_site_feed - Added {payload["feed_identifier"]}')
         return {}, 201
     else:
-        print(f'app.py - 400 - add_site_feed - {result}}')
+        print(f'app.py - 400 - add_site_feed - {result}')
         return {'error': result}, 400
 
 if __name__ == "__main__":

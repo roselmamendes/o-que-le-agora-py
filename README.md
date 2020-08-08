@@ -4,11 +4,7 @@
 
 - [ ] ler RSS feed de sites
 
-- [ ] guardar link para esses feeds
-
-- [ ] ler mais de um RSS feed
-
-- [ ] adicionar rss feed
+- [x] adicionar rss feed
 
 **Outros repositorios relacionados**
 
