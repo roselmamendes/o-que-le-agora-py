@@ -6,13 +6,9 @@
 
 - [ ] guardar link para esses feeds
 
-- [ ] botão atualizar feed
-
 - [ ] ler mais de um RSS feed
 
 - [ ] adicionar rss feed
-
-- [ ] mostrar links em ordem cronologica
 
 **Outros repositorios relacionados**
 

@@ -10,6 +10,7 @@
 - python
 - docker
 - Flask
+- [Peewee](http://docs.peewee-orm.com/en/latest/index.html) (ORM)
 
 ## Executando localmente
 
