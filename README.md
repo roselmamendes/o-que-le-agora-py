@@ -2,9 +2,9 @@
 
 **Objetivo**
 
-- [ ] ler RSS feed de sites
-
 - [x] adicionar rss feed
+
+- [x] retornar rss feed de um site
 
 **Outros repositorios relacionados**
 

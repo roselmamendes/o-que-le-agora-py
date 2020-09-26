@@ -1,13 +1,12 @@
 from flask import Flask, jsonify, request
-from o_que_le_agora.post_use_case import get_post_list
-from o_que_le_agora.rss_feed_use_case import save_feed_url
+from o_que_le_agora.rss_feed_use_case import save_feed_url, get_posts_from_feed
 
 app = Flask(__name__)
 
 
 @app.route('/posts/<feed_identifier>')
-def get_posts(feed_identifier):
-    posts = get_post_list(feed_identifier)
+def get_feed_posts(feed_identifier):
+    posts = get_posts_from_feed(feed_identifier)
     print(f'app.py - 200 - get_posts - For {feed_identifier} got {len(posts)} posts')
     return jsonify(posts)
 
