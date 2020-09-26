@@ -14,3 +14,7 @@ def get_posts_from_rss(rss_identifier):
         rss_feed = get_rss_feed_for(url)
         posts = rss_feed['entries']
     return posts
+
+def get_all_rss_identifier():
+    rss = store.get_all_rss_identifier()
+    return rss

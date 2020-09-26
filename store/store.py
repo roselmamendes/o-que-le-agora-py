@@ -19,7 +19,15 @@ def get_rss_url(rss_identifier):
         rss_feed = RSSFeed.select().where(RSSFeed.feed_identifier==rss_identifier).get()
     except peewee.DoesNotExist:
         return ''
-    return rss_feed.feed_url        
+    return rss_feed.feed_url
+
+def get_all_rss_identifier():
+    rss_feed = RSSFeed.select()
+    rsss = []
+    for rss in rss_feed:
+        rsss.append(rss.feed_identifier)
+
+    return rsss
 
 def clear_database():
     RSSFeed.delete().execute()

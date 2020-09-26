@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/roselmamendes/o-que-le-agora-py.svg?branch=master)](https://travis-ci.org/roselmamendes/o-que-le-agora-py)
+
 # o-que-le-agora-py
 
 **Objetivo**

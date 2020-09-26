@@ -34,3 +34,12 @@ class TestRSSFeedUseCase(unittest.TestCase):
 
         self.assertEqual(len(posts), 1)
         self.assertEqual(posts[0]['title'], 'primeiro post')
+
+    @patch('o_que_le_agora.rss_use_case.store')
+    def test_get_all_rss_identifier(self, mock_store):
+        mock_store.get_all_rss_identifier.return_value = ['rss-1', 'rss-2']
+        rss = rss_use_case.get_all_rss_identifier()
+
+        self.assertEqual(2, len(rss))
+        self.assertEqual('rss-1', rss[0])
+        self.assertEqual('rss-2', rss[1])

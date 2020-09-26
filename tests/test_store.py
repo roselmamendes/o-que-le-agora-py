@@ -1,5 +1,5 @@
 import unittest
-from store.store import save_rss_url, get_rss_url, clear_database
+from store.store import save_rss_url, get_rss_url, get_all_rss_identifier, clear_database
 
 class TestStore(unittest.TestCase):
     def tearDown(self):
@@ -16,3 +16,20 @@ class TestStore(unittest.TestCase):
         rss_url = get_rss_url('rss-identifier')
 
         self.assertEqual(rss_url, '')
+
+    def test_return_all_rss_identifier(self):
+        save_rss_url('rss-identifier', 'rss-url')
+        save_rss_url('rss-identifier1', 'rss-url1')
+        save_rss_url('rss-identifier2', 'rss-url2')
+
+        rss = get_all_rss_identifier()
+
+        self.assertEqual(3, len(rss))
+        self.assertEqual('rss-identifier', rss[0])
+        self.assertEqual('rss-identifier1', rss[1])
+        self.assertEqual('rss-identifier2', rss[2])
+
+    def test_return_all_rss_identifier_empty(self):
+        rss = get_all_rss_identifier()
+
+        self.assertEqual(0, len(rss))
