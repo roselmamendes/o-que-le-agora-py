@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from app import settings
 from o_que_le_agora import rss_use_case
 
 app = Flask(__name__)

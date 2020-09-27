@@ -3,3 +3,4 @@ gunicorn==20.0.4
 feedparser==6.0.0b3
 pytest==6.0.1
 peewee==3.13.3
+python-dotenv===0.14.0

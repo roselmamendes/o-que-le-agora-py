@@ -1,6 +1,12 @@
 import peewee
+import os
 
-database = peewee.SqliteDatabase("o_que_le_agora.db")
+if os.environ.get('ENV', 'TEST') == 'DEV':
+    print(f'iniciando o banco o_que_le_agora')
+    database = peewee.SqliteDatabase("o_que_le_agora.db")
+else:
+    print(f'iniciando o banco test')
+    database = peewee.SqliteDatabase('test.db')
 
 class RSSFeed(peewee.Model):
     feed_identifier = peewee.CharField()
